@@ -3,7 +3,7 @@ import time
 from bird import Bird
 
 # constants
-WIDTH, HEIGHT = 600, 400
+WIDTH, HEIGHT = 636, 764
 
 # Frames per second
 FPS = 60
@@ -19,6 +19,11 @@ wn.title("Flappy Bird")
 wn.bgcolor("light blue")
 wn.setup(WIDTH,HEIGHT)
 wn.tracer(0)
+
+# disable resizing
+canvas = wn.getcanvas()
+root = canvas.winfo_toplevel()
+root.resizable(False, False)
 
 # pen
 pen = turtle.Turtle()
@@ -40,7 +45,7 @@ for image in images:
     wn.register_shape(image)
 
 # bird
-bird = Bird(-300, 0, "circle", "green")
+bird = Bird(-100, 0, "circle", "green")
 
 while True:
     start_time = time.time()
@@ -51,12 +56,12 @@ while True:
 
     # render background
     pen.shape("graphics/bg.gif")
-    pen.goto(-450,0)
+    pen.goto(-450,20)
     pen.stamp()
-    pen.goto(400,0)
+    pen.goto(400,20)
     pen.stamp()
     pen.shape("graphics/ground.gif")
-    pen.goto(scroll, -300)
+    pen.goto(scroll, -350)
     pen.stamp()
 
     # render bird
