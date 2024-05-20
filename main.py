@@ -25,7 +25,13 @@ pen.penup()
 pen.hideturtle()
 
 # register shapes
-images = ["graphics/bg.gif", "graphics/bird1.gif", "graphics/bird2.gif", "graphics/bird3.gif", "graphics/ground.gif", "graphics/pipe.gif", "graphics/restart.gif"]
+images = ["graphics/bg.gif",
+          "graphics/bird1.gif",
+          "graphics/bird2.gif",
+          "graphics/bird3.gif",
+          "graphics/ground.gif",
+          "graphics/pipe.gif",
+          "graphics/restart.gif"]
 for image in images:
     wn.register_shape(image)
 
