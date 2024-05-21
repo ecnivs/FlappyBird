@@ -1,4 +1,32 @@
 # FlappyBird
-This repository revolves around writing a Flappy Bird game with just Python Turtle graphics. I'd appreciate any feedback or code reviews you might have!
+This project is a remake of the classic Flappy Bird game using Python and Pygame. Navigate the bird through sets of pipes without hitting them.
 
-## (Incomplete)
+![swappy-20240521-121206](https://github.com/ecnivs/FlappyBird/assets/106900369/98c5c8a9-6cbf-4497-9301-6fd95889b93c)
+
+## Features
+* Smooth Gameplay: Responsive controls and animations.
+* Simple Graphics: Classic Flappy Bird aesthetics.
+
+## Prerequisites
+* Python 3.x
+    * Pygame (pip install pygame)
+    * Random
+    * Sys
+
+## How to Play
++ Clone the repository:
+```
+git clone https://github.com/yourusername/flappy-bird-pygame.git
+cd flappy-bird-pygame
+```
+
++ Run the game:
+```
+python flappy_bird.py
+```
+
+## Controls:
+* Mouse Click: Flap the bird's wings.
+
+
+### I'd appreciate any feedback or code reviews you might have!
