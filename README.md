@@ -23,7 +23,7 @@ python main.py
 ```
 
 ## Controls:
-* Mouse Click: Flap the bird's wings.
+* `Mouse Click`: Flap the bird's wings.
 
 
 ### I'd appreciate any feedback or code reviews you might have!
