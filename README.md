@@ -13,14 +13,11 @@ This project is a remake of the classic Flappy Bird game using Python and Pygame
     * Random
     * Sys
 
-## How to Play
-+ Clone the repository:
-```
-git clone https://github.com/ecnivs/FlappyBird.git
-cd FlappyBird
-```
+## Installation
+* Ensure Python 3.x is installed from python.org.
+* Clone this repository or download and extract the ZIP file.
 
-+ Run the game:
+## Running the Game:
 ```
 python main.py
 ```
