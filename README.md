@@ -9,7 +9,7 @@ This project is a remake of the classic Flappy Bird game using Python and Pygame
 
 ## Prerequisites
 * Python 3.x
-    * Pygame (pip install pygame)
+    * Pygame `pip install pygame`
     * Random
     * Sys
 
