@@ -15,14 +15,16 @@ pygame.display.set_caption("Flappy Bird")
 clock = pygame.time.Clock()
 fps = 60
 
-# game variables
+# constants
 ground_scroll = 0
 scroll_speed = 4
-flying = False
-gameover = False
 pipe_gap = 150
 pipe_frequency = 1500 # milliseconds
 last_pipe = pygame.time.get_ticks() - pipe_frequency
+
+# variables
+flying = False
+gameover = False
 
 # load images
 bg = pygame.image.load("graphics/bg.png").convert()
@@ -111,9 +113,7 @@ class Button():
         self.rect.topleft = (x, y)
 
     def draw(self):
-        
         action = False
-
         # get mouse position
         pos = pygame.mouse.get_pos()
 
@@ -121,10 +121,8 @@ class Button():
         if self.rect.collidepoint(pos):
             if pygame.mouse.get_pressed()[0] == 1:
                 action = True
-
         # draw button
         wn.blit(self.image, (self.rect.x, self.rect.y))
-        
         return action
 
 # group
@@ -140,9 +138,7 @@ button = Button(WIDTH // 2 - 50, HEIGHT // 2 - 100, button_img)
 # add to group
 bird_group.add(flappy)
   
-  
 while True:
-
     # set fps
     clock.tick(fps)
 
@@ -153,14 +149,12 @@ while True:
     if pygame.sprite.groupcollide(bird_group, pipe_group, False, False) or flappy.rect.top < 0:
         gameover = True
 
-
     # check for ground collison
     if flappy.rect.bottom > 600:
         gameover = True
         flying = False
 
     if gameover == False and flying == True:
-
         # generate pipe
         time_now = pygame.time.get_ticks()
         if time_now - last_pipe > pipe_frequency:
@@ -188,12 +182,10 @@ while True:
     wn.blit(ground_img, (ground_scroll, 600))
 
     for event in pygame.event.get():
-
         # quit game
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
-        
         if event.type == pygame.MOUSEBUTTONDOWN and flying == False and gameover == False:
             flying = True
 
@@ -206,5 +198,6 @@ while True:
             flappy.rect.x = 100
             flappy.rect.y = int(HEIGHT / 2)
             flappy.vel = 0
-
+    
+    # update screen
     pygame.display.update()
